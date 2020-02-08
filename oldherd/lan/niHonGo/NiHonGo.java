@@ -34,7 +34,9 @@ class NiHonGoDataReader{
 
 public class NiHonGo {
 	private NiHonGoDataReader data;
-	public NiHonGo() {}
+	public NiHonGo() {
+		data = new NiHonGoDataReader();
+	}
 	public void load() throws IOException {
 		data.load("noHonGo.in");
 	}
@@ -43,6 +45,6 @@ public class NiHonGo {
 			data.load(fileName);
 	}
 	public String[] genWords(int numberOfNeeds) {
-		
+		return data.genWords(numberOfNeeds);
 	}
 }
