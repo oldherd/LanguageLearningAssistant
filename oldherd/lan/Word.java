@@ -1,3 +1,5 @@
+package oldherd.lan;
+
 public abstract class Word {
 	protected String naturalWord;
 	public abstract void set();
