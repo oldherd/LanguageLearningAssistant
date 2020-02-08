@@ -1,2 +1,2 @@
-Assistant for learning a language.
+Assistant for learning a language.  
 By oldherd.
