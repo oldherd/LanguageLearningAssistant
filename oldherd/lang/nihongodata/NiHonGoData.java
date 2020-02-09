@@ -37,7 +37,7 @@ class NiHonGoDataLoader{
 public class NiHonGoData {
 	private NiHonGoDataLoader data;
 	public NiHonGoData() {
-		data = new NiHonGoDataLoader();
+        data = new NiHonGoDataLoader();
     }
 	public void load() throws IOException {
 		data.load("niHonGoData.in");
