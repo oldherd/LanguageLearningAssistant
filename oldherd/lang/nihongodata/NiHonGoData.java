@@ -53,7 +53,7 @@ public class NiHonGoData {
         }
         NiHonGo[] words = new NiHonGo[numberOfNeeds];
         Random idGen = new Random();
-		for(int i = 0; i < numberOfNeeds; ++i) {
+        for(int i = 0; i < numberOfNeeds; ++i) {
             words[i] = data.genWord(idGen.nextInt(data.size()));
         }
         return words;
