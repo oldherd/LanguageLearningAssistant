@@ -1,17 +1,17 @@
-package oldherd.lan.words.nhw;
+package oldherd.lang.words.nihongo;
 
-import oldherd.lan.words.Word;
+import oldherd.lang.words.Word;
 
-public final class NHWord extends Word {
+public final class NiHonGo extends Word {
 	private String pronounce;
 	{
 		pronounce = new String();
 	}
 	
-	public NHWord() {
+	public NiHonGo() {
 		super();
 	}
-	public NHWord(String naturalWord, String meaning, String pronounce) {
+	public NiHonGo(String naturalWord, String meaning, String pronounce) {
 		super(naturalWord, meaning);
 		this.set(naturalWord, meaning, pronounce);
 	}

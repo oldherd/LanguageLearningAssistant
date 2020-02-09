@@ -1,4 +1,4 @@
-package oldherd.lan.words;
+package oldherd.lang.words;
 
 public class Word {
 	//设置单词时需要整套的设置,因为我们认为单词的词义不应该被随时更改
