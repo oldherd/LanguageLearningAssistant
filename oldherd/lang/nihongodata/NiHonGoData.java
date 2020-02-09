@@ -25,7 +25,7 @@ class NiHonGoDataLoader{
     }
     public int size() {
         return this.numberOfWords;
-	}
+    }
     public NiHonGo genWord(int index) {
         return words.get(index);
     }
