@@ -6,24 +6,24 @@ import java.io.*;
 import oldherd.lang.words.nihongo.NiHonGo;
 
 class NiHonGoDataLoader{
-	private ArrayList<NiHonGo> words;
-	private int numberOfWords;
-	NiHonGoDataLoader() {
-		words = new ArrayList<>(100);
-		numberOfWords = 0;
-	}
-	public void load(String fileName) throws IOException {
-		Scanner in = new Scanner(Paths.get(fileName, "UTF-8"));
-		while(in.hasNext()) {
-			//...Exception
-			String naturalWord = in.next();
-			String pronounce = in.next();
-			String meaning = in.next();
-			words.add(new NiHonGo(naturalWord, meaning, pronounce));
-			++numberOfWords;
-		}
-	}
-	public int size() {
+    private ArrayList<NiHonGo> words;
+    private int numberOfWords;
+    NiHonGoDataLoader() {
+    	words = new ArrayList<>(100);
+     	numberOfWords = 0;
+    }
+    public void load(String fileName) throws IOException {
+    	Scanner in = new Scanner(Paths.get(fileName, "UTF-8"));
+    	while(in.hasNext()) {
+            //...Exception
+            String naturalWord = in.next();
+            String pronounce = in.next();
+            String meaning = in.next();
+            words.add(new NiHonGo(naturalWord, meaning, pronounce));
+            ++numberOfWords;
+        }
+    }
+    public int size() {
 		return this.numberOfWords;
 	}
     public NiHonGo genWord(int index) {
@@ -38,7 +38,7 @@ public class NiHonGoData {
 	private NiHonGoDataLoader data;
 	public NiHonGoData() {
 		data = new NiHonGoDataLoader();
-	}
+    }
 	public void load() throws IOException {
 		data.load("niHonGoData.in");
 	}
