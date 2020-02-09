@@ -1,10 +1,10 @@
-package oldherd.lan.niHonGo;
+package oldherd.lan.nihongo;
 
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.nio.file.Paths;
 import java.io.*;
-import oldherd.lan.NHWord;
+import oldherd.lan.words.nhw.NHWord;
 //import oldherd.lan.DataReader;
 
 class NiHonGoDataReader{
@@ -13,7 +13,7 @@ class NiHonGoDataReader{
 	//private ArrayList<String> meaning;
 	private ArrayList<NHWord> words;
 	private int numberOfWords;
-	public NiHonGoDataReader() {
+	NiHonGoDataReader() {
 		//naturalWord = new ArrayList<>(100);
 		//pronounce = new ArrayList<>(100);
 		//meaning = new ArrayList<>(100);
@@ -27,7 +27,7 @@ class NiHonGoDataReader{
 			String naturalWord = in.next();
 			String pronounce = in.next();
 			String meaning = in.next();
-			words.add(NHWord(naturalWord, meaning, pronounce));
+			words.add(new NHWord(naturalWord, meaning, pronounce));
 			++numberOfWords;
 		}
 	}

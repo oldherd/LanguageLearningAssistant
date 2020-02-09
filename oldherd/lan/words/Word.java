@@ -1,4 +1,4 @@
-package oldherd.lan;
+package oldherd.lan.words;
 
 public class Word {
 	//设置单词时需要整套的设置,因为我们认为单词的词义不应该被随时更改
@@ -12,10 +12,9 @@ public class Word {
 		meaning = new String();
 	}
 	
-	Word() {
-		;
+	public Word() {
 	}
-	Word(String naturalWord, String meaning) {
+	public Word(String naturalWord, String meaning) {
 		this.set(naturalWord, meaning);
 	}
 	public String getWord() {

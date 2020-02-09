@@ -1,6 +1,6 @@
-package oldherd.lan.niHonGo;
+package oldherd.lan.words.nhw;
 
-import oldherd.lan.Word;
+import oldherd.lan.words.Word;
 
 public final class NHWord extends Word {
 	private String pronounce;
