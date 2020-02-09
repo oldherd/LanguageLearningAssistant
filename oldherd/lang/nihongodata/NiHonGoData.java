@@ -1,3 +1,5 @@
+package oldherd.lang.nihongodata;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
@@ -36,12 +38,15 @@ class NiHonGoDataLoader{
 
 public class NiHonGoData {
 	private NiHonGoDataLoader data;
-	public NiHonGoData() {
+    public NiHonGoData() {
         data = new NiHonGoDataLoader();
     }
 	public void load() throws IOException {
 		data.load("niHonGoData.in");
 	}
+    public void load(String fileName) throws IOException {
+        data.load(fileName);
+    }
 	public void load(String[] fileNames) throws IOException {
 		for(String fileName : fileNames)
 			data.load(fileName);
