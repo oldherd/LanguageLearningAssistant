@@ -1,22 +1,14 @@
 import java.util.Scanner;
-import java.nio.file.Paths;
-import java.io.*;
+import java.io.IOException;
 import oldherd.lang.nihongo.data.NiHonGoData;
 import oldherd.lang.words.nihongo.NiHonGo;
+import oldherd.inter.in.fileManager;
 
 public class Main {
     static final int maxChoice = 2;
 
-    static String fileToString(String fileName) throws IOException {
-        Scanner in = new Scanner(Paths.get(fileName), "UTF-8");
-        String resString = new String();
-        while(in.hasNextLine())
-            resString = resString + '\n' + in.nextLine();
-        return resString;
-    }
-    
-    public static void runNiHonGo(Scanner inputStream) throws IOException {
-        System.out.print(fileToString("./oldherd/lang/nihongo/out/fileLoadTips.in"));
+    static void runNiHonGo(Scanner inputStream) throws IOException {
+        System.out.print(fileManager.fileToString("./oldherd/lang/nihongo/out/fileLoadTips.in"));
         Scanner in = inputStream;
         NiHonGoData dataIn = new NiHonGoData();
         boolean flg = false;
@@ -27,22 +19,22 @@ public class Main {
         if(!flg) {
             dataIn.load();
         }
-        System.out.print(fileToString("./oldherd/lang/nihongo/out/mainLoop.in"));
+        System.out.print(fileManager.fileToString("./oldherd/lang/nihongo/out/mainLoop.in"));
     }
 
     public static void main(String[] args) throws IOException {
-        String greeting = fileToString("./mainOut/greetingWords.in");
+        String greeting = fileManager.fileToString("./mainOut/greetingWords.in");
         System.out.print(greeting);
-        String choiceTip = fileToString("./mainOut/Options.in");
+        String choiceTip = fileManager.fileToString("./mainOut/Options.in");
         Scanner in = new Scanner(System.in);
         while(true) {
             System.out.print(choiceTip);
             if(!in.hasNextInt()) {
-                System.out.print(fileToString("./mainOut/noCorrectInput.in"));
+                System.out.print(fileManager.fileToString("./mainOut/noCorrectInput.in"));
             } 
             int choiceNumber = in.nextInt();
             if(choiceNumber < 0 || choiceNumber > maxChoice) {
-                 System.out.print(fileToString("./mainOut/noCorrectInput.in"));
+                 System.out.print(fileManager.fileToString("./mainOut/noCorrectInput.in"));
             } else {
                 if(choiceNumber == 0) {
                     break;
