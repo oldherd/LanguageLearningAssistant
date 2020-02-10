@@ -1,4 +1,4 @@
-package oldherd.lang.nihongodata;
+package oldherd.lang.nihongo.data;
 
 import java.util.Scanner;
 import java.util.ArrayList;
