@@ -15,7 +15,7 @@ public class Main {
     }
     
     public static void runNiHonGo(Scanner inputStream) throws IOException {
-        System.out.print(fileToString("./mainOut/nihongo/fileLoadTips"));
+        System.out.print(fileToString("./mainOut/nihongo/out/fileLoadTips.in"));
         Scanner in = inputStream;
         NiHonGoData dataIn = new NiHonGoData();
         boolean flg = false;
@@ -26,7 +26,7 @@ public class Main {
         if(!flg) {
             dataIn.load();
         }
-        System.out.print(fileToString("./mainOut/nihongo/mainLoop.in"));
+        System.out.print(fileToString("./mainOut/nihongo/out/mainLoop.in"));
     }
 
     public static void main(String[] args) throws IOException {
