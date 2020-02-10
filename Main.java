@@ -15,7 +15,7 @@ public class Main {
     }
     
     public static void runNiHonGo(Scanner inputStream) throws IOException {
-        System.out.print(fileToString("./mainOut/fileLoadTips"));
+        System.out.print(fileToString("./mainOut/nihongo/fileLoadTips"));
         Scanner in = inputStream;
         NiHonGoData dataIn = new NiHonGoData();
         boolean flg = false;
@@ -26,7 +26,7 @@ public class Main {
         if(!flg) {
             dataIn.load();
         }
-        System.out.print(fileToString("./mainOut/"));
+        System.out.print(fileToString("./mainOut/nihongo/mainLoop.in"));
     }
 
     public static void main(String[] args) throws IOException {
@@ -41,9 +41,13 @@ public class Main {
             } 
             int choiceNumber = in.nextInt();
             if(choiceNumber < 0 || choiceNumber > maxChoice) {
-                 System.out.print(fileToString("./Mainout/noCorrectInput.in"));
+                 System.out.print(fileToString("./mainOut/noCorrectInput.in"));
             } else {
-                if(choiceNumber == 1) {
+                if(choiceNumber == 0) {
+                    break;
+                } else if(choiceNumber == 1) {
+                    System.out.print(choiceTip);
+                }else if(choiceNumber == 2) {
                     runNiHonGo(in);
                 }
             }
